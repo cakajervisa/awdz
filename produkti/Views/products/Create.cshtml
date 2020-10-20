@@ -1,0 +1,56 @@
+﻿@model produkti.Models.tabela_produkti
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h3>Krijo Produkt</h3>
+<form action="/products/create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="ProductName">Emri i Produktit</label>
+            <input type="text" class="form-control" id="emri" name="emri" placeholder="Emri i Produktit">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Price">Cmimi</label>
+            <input type="number" class="form-control" id="cmimi" name="cmimi" placeholder="cmimi">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="DateOfPurchase">Data e Blerjes</label>
+            <input type="date" class="form-control" id="dataeshtimit" name="dataeshtimit" placeholder="Data e Blerjes">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="CategoryID">Kategori</label>
+            <input type="text" class="form-control" id="kategoria" name="kategoria" placeholder="Kategoria">
+        </div>
+
+    </div>
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label for="Pagesa">Pagesa cash   </label>
+            <input class="form-check-input" type="radio" id="pagesa1" name="pagesa" value="1">
+            <label class="form-check-label" for="pagesa1">
+                Po
+            </label>
+            <input class="form-check-input" type="radio" id="pagesa2" name="pagesa" value="0">
+            <label class="form-check-label" for="pagesa2">
+                Jo
+            </label>
+        </div>
+        <div class="form-group col-md-6">
+
+        </div>
+    </div>
+    
+        <div class="text-center">
+            <button type="submit" class="  btn btn-success">Create</button>
+            <a class=" btn btn-danger" href="/products/index">Cancel</a>
+        </div>
+        
+</form>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="produktiModelStoreContainer" CdmEntityContainer="produktiEntities1">
+    <EntitySetMapping Name="tabela_produkti">
+      <EntityTypeMapping TypeName="produktiModel.tabela_produkti">
+        <MappingFragment StoreEntitySet="tabela_produkti">
+          <ScalarProperty Name="numri" ColumnName="numri" />
+          <ScalarProperty Name="emri" ColumnName="emri" />
+          <ScalarProperty Name="dataeshtimit" ColumnName="dataeshtimit" />
+          <ScalarProperty Name="cmimi" ColumnName="cmimi" />
+          <ScalarProperty Name="kategoria" ColumnName="kategoria" />
+          <ScalarProperty Name="pagesa" ColumnName="pagesa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

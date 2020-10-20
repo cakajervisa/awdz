@@ -1,0 +1,61 @@
+﻿@model IEnumerable<produkti.Models.tabela_produkti>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="/products/create">Create</a>
+</p>
+<table class="table">
+    <tr class="table-secondary">
+
+        <th>
+            @Html.DisplayNameFor(model => model.numri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataeshtimit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cmimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kategoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pagesa)
+        </th>
+       
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.numri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataeshtimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cmimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pagesa)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.emri }) |
+               
+                @Html.ActionLink("Delete", "Delete", new { id = item.emri })
+            </td>
+        </tr>
+    }
+
+</table>

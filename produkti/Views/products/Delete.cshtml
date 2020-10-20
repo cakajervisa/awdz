@@ -1,0 +1,65 @@
+﻿@model produkti.Models.tabela_produkti
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tabela_produkti</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataeshtimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataeshtimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cmimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cmimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pagesa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pagesa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
